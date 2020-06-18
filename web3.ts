@@ -6,7 +6,6 @@ const web3 = new Web3(process.env.HTTP_PROVIDER_URL);
 
 async function getResult(
 	{
-		hash,
 		to,
 		input,
 		from,
