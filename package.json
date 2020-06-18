@@ -1,0 +1,21 @@
+{
+  "name": "eth-revert-reason",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.0.2",
+    "loglevel": "^1.6.8",
+    "web3": "^1.2.9"
+  },
+  "scripts": {
+    "ethers-reason": "ts-node ethers.ts",
+    "web3-reason": "ts-node web3.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "dotenv": "^8.2.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}
