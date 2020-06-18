@@ -15,7 +15,14 @@
   "devDependencies": {
     "@types/node": "^14.0.13",
     "dotenv": "^8.2.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
