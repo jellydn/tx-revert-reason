@@ -9,7 +9,7 @@ config();
 
 // Parse argv
 const argv = cli({
-  name: 'eth-revert-reason',
+  name: 'tx-revert-reason',
 
   // Define parameters
   // Becomes available in ._.filePath
