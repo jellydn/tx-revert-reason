@@ -14,10 +14,9 @@ yarn install
 ## Usage
 
 ```sh
-# Find revert reason by web3
-yarn web3-reason TX_HASH
-# Find revert reason by ethers
-yarn ethers-reason TX_HASH
+cp .env.example .env # Fill the provider url
+yarn start TX_HASH # Check revert reason from tx hash
+yarn start --help # Show help
 ```
 
 ## Show your support

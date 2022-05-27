@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "@typescript-eslint/no-unsafe-assignment": "warn",
+    "@typescript-eslint/restrict-template-expressions": "warn",
+    "@typescript-eslint/no-unsafe-call": "warn",
+    "import/extensions": "warn",
+    "no-mixed-operators": "warn"
+  },
+  "space": true
+}
