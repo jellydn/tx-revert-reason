@@ -16,7 +16,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": {
-    "tx-revert-reason": "./bin/cli.js"
+    "tx-revert-reason": "./dist/cli.js"
   },
   "files": [
     "dist"
