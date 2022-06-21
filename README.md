@@ -18,6 +18,12 @@ cp .env.example .env # Fill the provider url
 npx tx-revert-reason --help
 ```
 
+```typescript
+  import { getReasonByWeb3Js } from 'tx-revert-reason';
+
+  const reason = await getReasonByWeb3Js(txHash, providerUrl);
+```
+
 ## Develop
 
 ```sh
