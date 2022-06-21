@@ -20,10 +20,13 @@ async function getResult(
   );
 }
 
-export async function getReasonByWeb3Js(txHash: string) {
+export async function getReasonByWeb3Js(
+  txHash: string,
+  providerUrl = process.env?.ETH_PROVIDER_URL ?? '',
+) {
   logger.info('tx hash:', txHash);
-  logger.info('provider:', process.env.HTTP_ETH_PROVIDER_URL);
-  const web3 = new Web3(process.env?.ETH_PROVIDER_URL ?? '');
+  logger.info('provider:', providerUrl);
+  const web3 = new Web3(providerUrl);
   if (!/^0x([A-Fa-f\d]{64})$/.test(txHash)) {
     throw new Error(
       'Invalid transaction hash argument. Must be a 32 byte hex string with a 0x prefix which is 64 characters in total.',

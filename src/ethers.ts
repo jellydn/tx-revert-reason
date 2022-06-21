@@ -12,12 +12,13 @@ function hexToAscii(string_: string) {
   return result;
 }
 
-export async function getReasonByEthersJs(hash: string) {
+export async function getReasonByEthersJs(
+  hash: string,
+  providerUrl = process.env?.ETH_PROVIDER_URL ?? '',
+) {
   logger.info('tx hash:', hash);
-  logger.info('provider:', process.env.HTTP_ETH_PROVIDER_URL);
-  const provider = new providers.JsonRpcProvider(
-    process.env?.ETH_PROVIDER_URL ?? '',
-  );
+  logger.info('provider:', providerUrl);
+  const provider = new providers.JsonRpcProvider(providerUrl);
   const tx = await provider.getTransaction(hash);
   if (tx) {
     const code = await provider.call(tx as any, tx.blockNumber);

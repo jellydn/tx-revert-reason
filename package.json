@@ -23,8 +23,9 @@
   ],
   "scripts": {
     "build": "pkgroll",
-    "prepare": "husky install",
-    "start": "npx esno src/cli"
+    "cli:ethers": "npx esno src/cli",
+    "cli:web3": "npx esno src/cli --lib web3",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,ts,css,md}": "prettier --write",
