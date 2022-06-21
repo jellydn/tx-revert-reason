@@ -1,6 +1,5 @@
 import process from 'node:process';
 import {providers} from 'ethers';
-import logger from 'loglevel';
 
 function hexToAscii(string_: string) {
   const hex = string_.toString();
@@ -16,8 +15,6 @@ export async function getReasonByEthersJs(
   hash: string,
   providerUrl = process.env?.ETH_PROVIDER_URL ?? '',
 ) {
-  logger.info('tx hash:', hash);
-  logger.info('provider:', providerUrl);
   const provider = new providers.JsonRpcProvider(providerUrl);
   const tx = await provider.getTransaction(hash);
   if (tx) {

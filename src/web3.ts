@@ -1,5 +1,4 @@
 import process from 'node:process';
-import logger from 'loglevel';
 import Web3 from 'web3';
 
 async function getResult(
@@ -24,8 +23,6 @@ export async function getReasonByWeb3Js(
   txHash: string,
   providerUrl = process.env?.ETH_PROVIDER_URL ?? '',
 ) {
-  logger.info('tx hash:', txHash);
-  logger.info('provider:', providerUrl);
   const web3 = new Web3(providerUrl);
   if (!/^0x([A-Fa-f\d]{64})$/.test(txHash)) {
     throw new Error(
@@ -57,7 +54,6 @@ export async function getReasonByWeb3Js(
   try {
     const result = await getResult(web3, transaction);
 
-    logger.info('RAW result:', result);
     // Trim the 0x prefix
     rawMessageData = result.slice(2);
   } catch (error: unknown) {
