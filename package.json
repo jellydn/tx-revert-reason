@@ -25,6 +25,7 @@
     "build": "pkgroll",
     "cli:ethers": "npx esno src/cli",
     "cli:web3": "npx esno src/cli --lib web3",
+    "example": "npx tsx examples/index.ts",
     "prepare": "husky install"
   },
   "lint-staged": {

@@ -85,11 +85,7 @@ export async function getReasonByWeb3Js(
         );
       }
     } else {
-      throw new Error(
-        `Failed to parse error message from Ethereum call: ${
-          (error as Error).message
-        }`,
-      );
+      return (error as Error).message;
     }
   }
 
