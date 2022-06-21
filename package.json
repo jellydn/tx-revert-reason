@@ -1,6 +1,6 @@
 {
   "name": "tx-revert-reason",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Get the revert reason from an Ethereum transaction hash",
   "keywords": [
     "tx revert reason",
