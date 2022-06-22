@@ -32,6 +32,16 @@ yarn start TX_HASH # Check revert reason from tx hash
 yarn start --help # Show help
 ```
 
+## Stargazers
+
+[![Stargazers repo roster for @jellydn/tx-revert-reason](https://reporoster.com/stars/jellydn/tx-revert-reason)](https://github.com/jellydn/tx-revert-reason/stargazers)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q61Q7YM)
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
