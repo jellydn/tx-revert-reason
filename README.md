@@ -5,6 +5,9 @@
 
 > Decode revert reason from failed transaction
 
+## 🏠 [Homepage](https://github.com/jellydn/tx-revert-reason)
+### ✨ [API documentation](https://tx-revert-reason.productsway.com)
+
 ## Install
 
 ```sh
@@ -13,15 +16,20 @@ yarn add tx-revert-reason
 
 ## Usage
 
+### CLI
 ```sh
 cp .env.example .env # Fill the provider url
 npx tx-revert-reason --help
 ```
 
-```typescript
-  import { getReasonByWeb3Js } from 'tx-revert-reason';
+### Typescript
 
-  const reason = await getReasonByWeb3Js(txHash, providerUrl);
+```typescript
+import { getReasonByWeb3Js, getReasonByEthersJs } from 'tx-revert-reason';
+
+const reasonByWeb3 = await getReasonByWeb3Js(txHash, providerUrl);
+const reasonByEthers = await getReasonByEthersJs(txHash, providerUrl);
+
 ```
 
 ## Develop
