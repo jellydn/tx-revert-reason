@@ -36,6 +36,16 @@
     "*.{js,ts}": "xo --fix",
     "package.json": "sort-package-json"
   },
+  "xo": {
+    "rules": {
+      "no-mixed-operators": "warn",
+      "n/prefer-global/process": "warn",
+      "import/extensions": "warn",
+      "@typescript-eslint/no-unsafe-assignment": "warn",
+      "@typescript-eslint/no-unsafe-call": "warn",
+      "@typescript-eslint/restrict-template-expressions": "warn"
+    }
+  },
   "prettier": {
     "importOrder": [
       "^@core/(.*)$",

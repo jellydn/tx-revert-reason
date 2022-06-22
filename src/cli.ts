@@ -9,28 +9,28 @@ config();
 
 // Parse argv
 const argv = cli({
-  name: 'tx-revert-reason',
+	name: 'tx-revert-reason',
 
-  // Define parameters
-  // Becomes available in ._.filePath
-  parameters: [
-    '<hash>', // Hash is required
-  ],
+	// Define parameters
+	// Becomes available in ._.filePath
+	parameters: [
+		'<hash>', // Hash is required
+	],
 
-  // Define flags/options
-  // Becomes available in .flags
-  flags: {
-    // Parses `--lib` as a string
-    lib: {
-      type: String,
-      description: 'ethers or web3',
-      default: 'ethers',
-    },
-  },
+	// Define flags/options
+	// Becomes available in .flags
+	flags: {
+		// Parses `--lib` as a string
+		lib: {
+			type: String,
+			description: 'ethers or web3',
+			default: 'ethers',
+		},
+	},
 });
 
 if (argv.flags.lib === 'ethers') {
-  getReasonByEthersJs(argv._.hash).then(logger.info).catch(logger.error);
+	getReasonByEthersJs(argv._.hash).then(logger.info).catch(logger.error);
 } else {
-  getReasonByWeb3Js(argv._.hash).then(logger.info).catch(logger.error);
+	getReasonByWeb3Js(argv._.hash).then(logger.info).catch(logger.error);
 }

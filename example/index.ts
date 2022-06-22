@@ -5,11 +5,12 @@ import {getReasonByWeb3Js} from '../src';
 config();
 
 getReasonByWeb3Js(
-  '0x901a505ab74c96686d086dc2ed1ae658d2b31485f4bdd610658177250a792b38',
+	'0x35403cfc33cababac41ad998dff9038c57945ac7cbe9f22e5bdfbf89a8756bd7',
+	'https://data-seed-prebsc-1-s1.binance.org:8545',
 )
-  .then(reason => {
-    console.log(reason);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+	.then(reason => {
+		console.log(reason);
+	})
+	.catch(error => {
+		console.log(error);
+	});
