@@ -60,7 +60,7 @@
     "cleye": "1.2.1",
     "dotenv": "16.0.2",
     "ethers": "5.7.1",
-    "loglevel": "1.8.0",
+    "loglevel": "1.9.1",
     "web3": "2.0.0-alpha.1"
   },
   "devDependencies": {
